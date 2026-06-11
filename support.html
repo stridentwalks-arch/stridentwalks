@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>Strident Walks</title> 
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+
+    <div class="topnav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a class="active" href="support.html">Support</a></li>
+            <li><a href="virtual-walks.html">Virtual Walks</a></li>
+        </ul>
+
+        <!-- Dynamic login status -->
+        <span id="nav-user" class="nav-user"></span>
+
+        <script>
+            fetch("/whoami")
+                .then(res => res.json())
+                .then(data => {
+                    const navUser = document.getElementById("nav-user");
+
+                    if (data.user) {
+                        navUser.innerHTML = `Welcome, ${data.user} | <a href="/logout">Logout</a>`;
+                    } else {
+                        navUser.innerHTML = `<a href="login.html">Login</a> | <a href="register.html">Register</a>`;
+                    }
+                });
+        </script>
+    </div>
+</header>
+
+<div class="page-content">
+
+    <div class="welcome-section">
+        <h1>Contact & Support</h1>
+
+        <p>
+            Need help? The Strident Walks support team is available to assist with account issues, video access, website navigation, and general enquiries.
+            We value your feedback and are committed to providing a positive experience for all users.
+            Please contact us using the information below and we will respond as soon as possible.
+        </p>
+    </div>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+
+        <p class="contact-intro">
+            Have a question, suggestion, or need support? We'd love to hear from you.
+            Reach out to the Strident Walks team using the email below, or the contact form.
+        </p>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>support@stridentwalks.com</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Hamilton, New Zealand</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday<br>8:00 AM - 4:00 PM</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-form-header">
+        <h2>Reach Out To Us!</h2>
+        <p class="centered-text">Have a question or any feedback for us? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form id="contact-form" class="contact-form">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <input type="text" name="subject" placeholder="Subject" required>
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script>
+        emailjs.init({
+            publicKey: "WWUfvY7tZp2uefzHw"
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const btn = form.querySelector("button");
+
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+
+            Promise.all([
+                emailjs.sendForm("service_4mjv0o7", "template_i79zkyt", form),
+                emailjs.sendForm("service_4mjv0o7", "template_fh4m1bb", form)
+            ])
+            .then(() => {
+                btn.textContent = "Message Sent ✓";
+                form.reset();
+                setTimeout(() => {
+                    window.location.href = "thank-you.html";
+                }, 1500);
+            })
+            .catch((error) => {
+                console.error("EmailJS Error:", error);
+                alert("Sorry, your message could not be sent. Please try again.");
+                btn.disabled = false;
+                btn.textContent = "Send Message";
+            });
+        });
+        </script>
+
+    </section>
+
+</div>
+
+<p style="text-align: center;">
+    <a href="#top" class="top-button">Back to Top</a>
+</p>
+
+<footer>
+    <hr>
+    <p style="text-align:center;color: #ffff;">
+        Copyright&#169; 2026 Strident Walks. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>

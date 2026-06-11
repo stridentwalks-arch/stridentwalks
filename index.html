@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>Strident Walks</title> 
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="Logo">
+    </div>
+
+    <div class="topnav">
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="virtual-walks.html">Virtual Walks</a></li>
+        </ul>
+
+        <!-- Dynamic login status -->
+        <span id="nav-user" class="nav-user"></span>
+
+        <script>
+            fetch("/whoami")
+                .then(res => res.json())
+                .then(data => {
+                    const navUser = document.getElementById("nav-user");
+
+                    if (data.user) {
+                        navUser.innerHTML = `Welcome, ${data.user} | <a href="/logout">Logout</a>`;
+                    } else {
+                        navUser.innerHTML = `<a href="login.html">Login</a> | <a href="register.html">Register</a>`;
+                    }
+                });
+        </script>
+    </div>
+</header>
+
+<div class="page-content">
+    <div class="welcome-section">
+        <h1>Welcome to Strident Walks</h1>
+
+        <p>
+            At Strident Walks, our mission is to make walking accessible, enjoyable, and immersive for everyone through virtual walking experiences. 
+            Our videos are designed for everyone including beginners, seniors, and individuals with disabilities. 
+            Our videos will empower you to discover the world at a pace that suits your lifestyle. 
+        </p>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">What is Strident Walks?</button>
+                <div class="faq-answer">
+                    <p>Strident Walks is a virtual walking platform that allows users to experience walks from around the world from the comfort of their own home.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Who can use Strident Walks?</button>
+                <div class="faq-answer">
+                    <p>Our virtual walks are designed for everyone, including beginners, seniors, and people with limited mobility.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do I need special equipment?</button>
+                <div class="faq-answer">
+                    <p>No. You only need a device with internet access such as a computer, tablet, or smartphone.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are the walks free?</button>
+                <div class="faq-answer">
+                    <p>We offer a selection of free walks and may provide premium content for registered users.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<p style="text-align: center;">
+    <a href="#top" class="top-button">Back to Top</a>
+</p>
+
+<script src="js/theme.js" defer></script>
+<script src="js/accordion_edu.js" defer></script>
+<script src="js/accordion_skill.js" defer></script>
+
+<footer>
+    <hr>
+    <p style="text-align:center;color: #ffff;">
+        Copyright&#169; 2026 Strident Walks. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>

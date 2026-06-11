@@ -1,0 +1,24 @@
+[
+  {
+    "username": "admin",
+    "password": "password123"
+  },
+  {
+    "username": "taipo",
+    "password": "walks2024"
+  },
+  {
+    "username": "Hello123",
+    "password": "Hello123"
+  },
+  {
+    "username": "waterrisbest",
+    "password": "$2b$10$6IZ69ai3758l7v./K8zGsObCdpSvgAZYpMlgPzVvEtc.qI7w8vhha",
+    "email": "waterrisbest@gmail.com"
+  },
+  {
+    "username": "bigmac",
+    "password": "$2b$10$qKUj5imVvn8YLJRVrqrnveDsrg0WgX3jP/qygA12vcVfo6MH.xYhi",
+    "email": "bigmac@gmail.com"
+  }
+]

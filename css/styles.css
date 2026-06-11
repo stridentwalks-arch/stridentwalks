@@ -1,0 +1,639 @@
+.main-header {
+  position: relative;
+  background-color: #ffffff; 
+  padding: 15px 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.photo {
+  height: 50px;  
+  width: auto;   
+  display: block;
+}
+
+.brand-title {
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+body {
+    background-image: url("../images/forest.png");
+    background-size: cover;          
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-attachment: fixed;   
+    margin: 0;
+    min-height: 100vh;
+}
+
+.page-content {
+    background-color: rgba(255, 255, 255, 0.75);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Dynamic login status in navbar */
+.nav-user {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-user a {
+    color: #6aff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-user a:hover {
+    color: #9fff4f;
+    text-decoration: underline;
+}
+
+/* Position login status on the right side of navbar */
+.nav-user {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style the links inside the login status */
+.nav-user a {
+    color: #6aff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-user a:hover {
+    color: #9fff4f;
+    text-decoration: underline;
+}
+
+
+
+.navbar {
+  position: relative;
+  background: #222;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Left logo */
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+/* Style for nav links */
+nav a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Style the links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border-radius: 6px;
+}
+
+.topnav a:hover {
+  background-color: rgba(106, 255, 0, 0.15);
+  color: #6aff00;
+  transform: translateY(-2px);
+}
+
+/* Login Form */
+
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6aff00;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background-color: #57d100;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    color: #FFFFFF;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Center login above welcome text */
+.login-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+/* Login button styling */
+.login-btn {
+  background-color: #6aff00;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #57d100;
+}
+
+
+.login-form {
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  width: 300px;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 15px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+
+.login-form.show {
+  max-height: 300px;
+  padding: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6aff00;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.page-content {
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* Founders Section */
+.founders-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.founders-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Container for all founder cards */
+.founders-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual founder card */
+.founder-card {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Image box */
+.founder-image-box {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Founder image */
+.founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Founder name */
+.founder-name {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+/* Founder role */
+.founder-role {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.founders-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+}
+
+.founder-role {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.founders-description {
+    max-width: 900px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+.contact-info {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-card p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+
+.contact-form-header {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-form-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-form-section p {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 360px;   /* mobile-style width */
+    margin: 0 auto;     /* center it */
+
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+/* focus effect (feels modern) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6aff00;
+    box-shadow: 0 0 0 3px rgba(106, 255, 0, 0.2);
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #6aff00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #57d100;
+    transform: translateY(-2px);
+}
+/* FAQ Accordion */
+.faq-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 18px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+.faq-question:hover {
+    background: rgba(106, 255, 0, 0.15);
+}
+
+.faq-answer {
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(255,255,255,0.08);
+}
+
+.faq-answer p {
+    padding: 20px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.top-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.accordion_edu, .accordion_skill {
+	padding: 18px;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	background-color: #eee;
+	color: #444;
+	transition: 0.4s;
+	outline: none;
+	width: 90%;
+	align-self: center;
+	margin: 10px 0px 10px 0px;
+}
+
+.active, .accordion_edu:hover, .accordion_skill:hover{
+  background-color: #ccc;
+}
+
+.edubox, .skillbox {
+	background-color: var(--accent);
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 25px;
+	border-radius: 25px;
+}
+.edupanel {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+}
+
+h4 {
+	background-color: var(--accent);
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+}
